@@ -20,6 +20,7 @@ RUN ln -sf /config/query_ip_whitelist.txt $TS_DIR/query_ip_whitelist.txt
 RUN ln -sf /config/query_ip_blacklist.txt $TS_DIR/query_ip_blacklist.txt
 RUN ln -sf /config/ts3server.sqlitedb $TS_DIR/ts3server.sqlitedb
 RUN ln -sf /config/.ts3server_license_accepted $TS_DIR/.ts3server_license_accepted
+RUN ln -sf /config/ssh_host_rsa_key $TS_DIR/ssh_host_rsa_key
 
 CMD [ "./ts3server", "inifile=/config/ts3server.ini" ]
 
