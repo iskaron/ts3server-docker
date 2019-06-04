@@ -1,4 +1,4 @@
-FROM iskaron/ts3:3.7.1
+FROM iskaron/ts3:3.8.0
 MAINTAINER Iskaron <mail@iskaron.de>
 
 VOLUME [ "/config", "/opt/ts3/logs", "/opt/ts3/files" ]
