@@ -3,7 +3,6 @@ MAINTAINER Iskaron <mail@iskaron.de>
 
 VOLUME [ "/config", "/opt/ts3/logs", "/opt/ts3/files" ]
 
-USER teamspeak
 WORKDIR /opt/ts3
 
 EXPOSE 10011
@@ -13,6 +12,10 @@ EXPOSE 9987-9999/udp
 
 ENV LD_LIBRARY_PATH .:./redist:$LD_LIBRARY_PATH
 ENV TS_DIR=/opt/ts3
+
+RUN chown teamspeak $TS_DIR
+
+USER teamspeak
 
 RUN ln -sf /config/licensekey.dat $TS_DIR/licensekey.dat
 RUN ln -sf /config/serverkey.dat $TS_DIR/serverkey.dat
